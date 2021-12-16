@@ -66,7 +66,7 @@ print(filePath)
 try:
     # Hand-off file to Google Images for a reverse image search.
     #filePath = imgDir
-    searchUrl = 'http://www.google.com.au/searchbyimage/upload'
+    searchUrl = 'http://www.google.com/searchbyimage/upload'
     multipart = {'encoded_image': (filePath, open(filePath, 'rb')), 'image_content': ''}
     response = requests.post(searchUrl, files=multipart, allow_redirects=False)
     fetchUrl = response.headers['Location']
